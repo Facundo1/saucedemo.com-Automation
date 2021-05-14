@@ -99,6 +99,27 @@ class inventoryPage extends Page {
   get sixthBtnAddToCart() {
     return $('button[id="add-to-cart-test.allthethings()-t-shirt-(red)"]')
   }
+
+  //Remove from cart buttons
+  get firstBtnRemoveFromCart() {
+    return $('#remove-sauce-labs-backpack')
+  }
+  get secondBtnRemoveFromCart() {
+    return $('#remove-sauce-labs-bike-light')
+  }
+  get thirdBtnRemoveFromCart() {
+    return $('#remove-sauce-labs-bolt-t-shirt')
+  }
+  get fourthBtnRemoveFromCart() {
+    return $('#remove-sauce-labs-fleece-jacket')
+  }
+  get fivethBtnRemoveFromCart() {
+    return $('#remove-sauce-labs-onesie')
+  }
+  get sixthBtnRemoveFromCart() {
+    return $('button[id="remove-test.allthethings()-t-shirt-(red)"]')
+  }
+
   //Number of cart
   get numberOfProductsInCart() {
     return $('#shopping_cart_container > a[class=shopping_cart_link]').getText()
