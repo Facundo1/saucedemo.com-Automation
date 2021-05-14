@@ -22,6 +22,11 @@ class LoginPage extends Page {
   get dogImg() {
     return $('img[src="/static/media/sl-404.168b1cce.jpg"]').getAttribute('src')
   }
+  get titleOfPage() {
+    return $(
+      '#header_container > div.header_secondary_container > span[class="title"]'
+    )
+  }
 
   /**
    * a method to encapsule automation code to interact with the page
@@ -33,6 +38,9 @@ class LoginPage extends Page {
     this.btnSubmit.click()
   }
 
+  async timeToLoad() {
+    this.titleOfPage.waitForDisplayed({ timeout: 2000 })
+  }
   /**
    *  overwrite specifc options to adapt it to page object
    */

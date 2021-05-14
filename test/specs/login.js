@@ -47,15 +47,15 @@ describe('Problem user test', () => {
     )
   })
 })
-/*
-describe('Performance user test',()=>{
-  it('Login with performance_glitch_user',  () => {
-    LoginPage.open('');
-    LoginPage.login('performance_glitch_user', 'secret_sauce');
-    expect(browser).not.waitForDisplayed({timeout:1000})
-  });
-})
-*/
+
+/* describe('Performance user test', () => {
+  it('Login with performance_glitch_user', () => {
+    LoginPage.open('')
+    LoginPage.login('performance_glitch_user', 'secret_sauce')
+    expect(browser).toBe(LoginPage.timeToLoad())
+  })
+}) */
+
 describe('Test with standar user', () => {
   it('Should login with standard_user', () => {
     LoginPage.open('')
