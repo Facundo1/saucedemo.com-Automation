@@ -104,6 +104,10 @@ class inventoryPage extends Page {
     return $('#shopping_cart_container > a[class=shopping_cart_link]').getText()
   }
 
+  get cartBtn() {
+    return $('div[id="shopping_cart_container"] > a')
+  }
+
   // Filter combobox options
   async aToZFilterClicker() {
     this.filterCombobox.click()
@@ -140,6 +144,11 @@ class inventoryPage extends Page {
   }
   async sixthBtnAddToCartClick() {
     this.sixthBtnAddToCart.click()
+  }
+
+  //Btn cart click
+  async clickOnCart() {
+    this.cartBtn.click()
   }
 
   //Check if word is less than word2

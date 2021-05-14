@@ -159,4 +159,10 @@ describe('Cart icon tests', () => {
     inventoryPage.sixthBtnAddToCartClick()
     expect(parseInt(inventoryPage.numberOfProductsInCart)).toBe(6)
   })
+  it('click to the cart redirects to cart.html page', () => {
+    loginPage.open('')
+    loginPage.login('standard_user', 'secret_sauce')
+    inventoryPage.clickOnCart()
+    expect(browser).toHaveUrl('https://www.saucedemo.com/cart.html')
+  })
 })
