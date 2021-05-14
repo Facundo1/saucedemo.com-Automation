@@ -146,3 +146,17 @@ describe('Filter tests', () => {
     ).toBe(1)
   })
 })
+
+describe('Cart icon tests', () => {
+  it('add product to cart and count items', () => {
+    loginPage.open('')
+    loginPage.login('standard_user', 'secret_sauce')
+    inventoryPage.firstBtnAddToCartClick()
+    inventoryPage.secondBtnAddToCartClick()
+    inventoryPage.thirdBtnAddToCartClick()
+    inventoryPage.fourthBtnAddToCartClick()
+    inventoryPage.fivethBtnAddToCartClick()
+    inventoryPage.sixthBtnAddToCartClick()
+    expect(parseInt(inventoryPage.numberOfProductsInCart)).toBe(6)
+  })
+})

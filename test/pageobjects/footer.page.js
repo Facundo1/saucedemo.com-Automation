@@ -2,24 +2,15 @@ const Page = require('./page')
 
 class FooterPage extends Page {
   get btnGoToTwitter() {
-    return $('a[href="https://twitter.com/saucelabs"]')
+    return $('li[class="social_twitter"]>a').getAttribute('href')
   }
   get btnGoToFacebook() {
-    return $('a[href="https://www.facebook.com/saucelabs"]')
+    return $('li[class="social_facebook"]>a').getAttribute('href')
   }
   get btnGoToLinkedin() {
-    return $('a[href="https://www.linkedin.com/company/sauce-labs/"]')
+    return $('li[class="social_linkedin"]>a').getAttribute('href')
   }
 
-  async goToTwitter() {
-    this.btnGoToTwitter.click()
-  }
-  async goToFacebook() {
-    this.btnGoToFacebook.click()
-  }
-  async goToLinkedin() {
-    this.btnGoToLinkedin.click()
-  }
   open(path) {
     return super.open(path)
   }

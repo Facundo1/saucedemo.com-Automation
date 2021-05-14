@@ -80,6 +80,31 @@ class inventoryPage extends Page {
     ).getText()
   }
 
+  //Add To cart buttons
+  get firstBtnAddToCart() {
+    return $('#add-to-cart-sauce-labs-backpack')
+  }
+  get secondBtnAddToCart() {
+    return $('#add-to-cart-sauce-labs-bike-light')
+  }
+  get thirdBtnAddToCart() {
+    return $('#add-to-cart-sauce-labs-bolt-t-shirt')
+  }
+  get fourthBtnAddToCart() {
+    return $('#add-to-cart-sauce-labs-fleece-jacket')
+  }
+  get fivethBtnAddToCart() {
+    return $('#add-to-cart-sauce-labs-onesie')
+  }
+  get sixthBtnAddToCart() {
+    return $('button[id="add-to-cart-test.allthethings()-t-shirt-(red)"]')
+  }
+  //Number of cart
+  get numberOfProductsInCart() {
+    return $('#shopping_cart_container > a[class=shopping_cart_link]').getText()
+  }
+
+  // Filter combobox options
   async aToZFilterClicker() {
     this.filterCombobox.click()
     this.aToZFilterOption.click()
@@ -95,6 +120,26 @@ class inventoryPage extends Page {
   async highToLowFilterClicker() {
     this.filterCombobox.click()
     this.highToLowFilterOption.click()
+  }
+
+  // add to cart buttons of productos click
+  async firstBtnAddToCartClick() {
+    this.firstBtnAddToCart.click()
+  }
+  async secondBtnAddToCartClick() {
+    this.secondBtnAddToCart.click()
+  }
+  async thirdBtnAddToCartClick() {
+    this.thirdBtnAddToCart.click()
+  }
+  async fourthBtnAddToCartClick() {
+    this.fourthBtnAddToCart.click()
+  }
+  async fivethBtnAddToCartClick() {
+    this.fivethBtnAddToCart.click()
+  }
+  async sixthBtnAddToCartClick() {
+    this.sixthBtnAddToCart.click()
   }
 
   //Check if word is less than word2
