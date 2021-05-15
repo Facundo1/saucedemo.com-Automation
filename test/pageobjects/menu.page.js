@@ -6,16 +6,16 @@ class menuPage extends Page {
     return $('button[id="react-burger-menu-btn"]')
   }
   get inventorySideBar() {
-    return $('a[id="inventory_sidebar_link"]')
+    return $('#inventory_sidebar_link')
   }
   get aboutSideBar() {
-    return $('a[id="about_sidebar_link"]')
+    return $('#about_sidebar_link')
   }
   get logoutSideBar() {
-    return $('a[id="logout_sidebar_link"]')
+    return $('#logout_sidebar_link')
   }
   get resetAppSideBar() {
-    return $('a[id="reset_sidebar_link"]')
+    return $('#reset_sidebar_link')
   }
 
   menuBtnClick() {
