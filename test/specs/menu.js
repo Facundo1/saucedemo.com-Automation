@@ -15,6 +15,7 @@ describe('Menu items tests', () => {
     LoginPage.login('standard_user', 'secret_sauce')
     menuPage.menuBtnClick()
     menuPage.resetSideBarClick()
+    inventoryPage.open('inventory.html')
     expect(inventoryPage.numberOfProductsInCart).not.toBe(1)
   })
   it('logout test', () => {
