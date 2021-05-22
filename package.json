@@ -4,7 +4,7 @@
   "description": "The last project of QA course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "automation-test": "npx wdio wdio.conf.js"
   },
   "author": "Facundo Loberse",
   "license": "ISC",
