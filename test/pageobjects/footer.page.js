@@ -10,6 +10,9 @@ class FooterPage extends Page {
   get btnGoToLinkedin() {
     return $('li[class="social_linkedin"]>a').getAttribute('href')
   }
+  get footerText() {
+    return $('.footer_copy')
+  }
 
   open(path) {
     return super.open(path)

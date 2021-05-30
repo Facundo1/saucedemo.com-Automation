@@ -39,6 +39,11 @@ describe('Tests of locked users', () => {
 })
 
 describe('Problem user test', () => {
+  it('problem_user navigate to main page', () => {
+    LoginPage.open('')
+    LoginPage.login('problem_user', 'secret_sauce')
+    expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+  })
   it('testing photo when problem_user is logged', () => {
     LoginPage.open('')
     LoginPage.login('problem_user', 'secret_sauce')

@@ -48,7 +48,7 @@ class inventoryPage extends Page {
     return $('#item_3_title_link > div').getText()
   }
 
-  // Producs Price selectors
+  // Products Price selectors
   get firstPrice() {
     return $(
       '#inventory_container > div > div:nth-child(1) > div.inventory_item_description > div.pricebar > div'
@@ -120,13 +120,37 @@ class inventoryPage extends Page {
     return $('button[id="remove-test.allthethings()-t-shirt-(red)"]')
   }
 
-  //Number of cart
+  //Images of products
+  get productImg() {
+    return $('.inventory_item_img')
+  }
+
+  //Detail products selectors
+  get productDesc() {
+    return $('.inventory_details_desc')
+  }
+  get productPrice() {
+    return $('.inventory_details_price')
+  }
+  get backpackAddBtn() {
+    return $('#add-to-cart-sauce-labs-backpack')
+  }
+  get backpackRemoveBtn() {
+    return $('#remove-sauce-labs-backpack')
+  }
+  get backBtn() {
+    return $('#back-to-products')
+  }
+
+  //Cart
   get numberOfProductsInCart() {
     return $('#shopping_cart_container > a[class=shopping_cart_link]').getText()
   }
-
   get cartBtn() {
     return $('div[id="shopping_cart_container"] > a')
+  }
+  get cartBadge() {
+    return $('.shopping_cart_badge')
   }
 
   // Filter combobox options
@@ -170,6 +194,11 @@ class inventoryPage extends Page {
   //Btn cart click
   async clickOnCart() {
     this.cartBtn.click()
+  }
+
+  //Btn add and remove from cart detail page
+  addToCart() {
+    this.backpackAddBtn.click()
   }
 
   //Check if word is less than word2

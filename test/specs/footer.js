@@ -24,4 +24,11 @@ describe('Tests social media buttons', () => {
       'https://www.linkedin.com/company/sauce-labs/'
     )
   })
+  it('Footer copyright text', () => {
+    LoginPage.open('')
+    LoginPage.login('standard_user', 'secret_sauce')
+    expect(FooterPage.footerText).toHaveText(
+      '© 2021 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy'
+    )
+  })
 })
