@@ -48,13 +48,16 @@ describe('Problem user test', () => {
   })
 })
 
-/* describe('Performance user test', () => {
-  it('Login with performance_glitch_user', () => {
+describe(' performance_glitch_user tests', () => {
+  it('time to navigate to inventory.html is bigger than 3 secods', () => {
     LoginPage.open('')
     LoginPage.login('performance_glitch_user', 'secret_sauce')
-    expect(browser).toBe(LoginPage.timeToLoad())
+    browser.setTimeout({
+      pageLoad: 5000
+    })
+    expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
   })
-}) */
+})
 
 describe('Test with standar user', () => {
   it('Should login with standard_user', () => {
