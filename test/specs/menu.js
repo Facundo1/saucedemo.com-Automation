@@ -3,7 +3,14 @@ const menuPage = require('../pageobjects/menu.page')
 const inventoryPage = require('../pageobjects/inventory.page')
 
 describe('Menu items tests', () => {
-  it('All items test', () => {
+  it('open and close menu test', () => {
+    LoginPage.open('')
+    LoginPage.login('standard_user', 'secret_sauce')
+    menuPage.menuBtnClick()
+    menuPage.crossbtn.click()
+    expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+  })
+  it('all items test', () => {
     LoginPage.open('')
     LoginPage.login('standard_user', 'secret_sauce')
     menuPage.menuBtnClick()

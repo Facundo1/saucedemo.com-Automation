@@ -5,6 +5,9 @@ class menuPage extends Page {
   get menuBtn() {
     return $('button[id="react-burger-menu-btn"]')
   }
+  get crossbtn() {
+    '#react-burger-cross-btn'
+  }
   get inventorySideBar() {
     return $('#inventory_sidebar_link')
   }

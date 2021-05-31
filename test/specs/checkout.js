@@ -4,6 +4,19 @@ const inventoryPage = require('../pageobjects/inventory.page')
 const loginPage = require('../pageobjects/login.page')
 
 describe('Checkout tests', () => {
+  it('title of the checkout page test', () => {
+    inventoryPage.open('')
+    loginPage.login('standard_user', 'secret_sauce')
+    menuPage.menuBtnClick()
+    menuPage.resetSideBarClick()
+    inventoryPage.open('inventory.html')
+    inventoryPage.firstBtnAddToCartClick()
+    inventoryPage.secondBtnAddToCartClick()
+    inventoryPage.clickOnCart()
+    checkOutPage.checkOutBtnClick()
+    expect(checkOutPage.titleMsg).toBe('CHECKOUT: YOUR INFORMATION')
+    browser.pause(3000)
+  })
   it('first name field empty', () => {
     inventoryPage.open('')
     loginPage.login('standard_user', 'secret_sauce')

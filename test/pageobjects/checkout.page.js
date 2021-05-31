@@ -1,6 +1,13 @@
 const Page = require('./page')
 
 class checkOutPage extends Page {
+  //Title message
+  get titleMsg() {
+    return $(
+      '#header_container > div.header_secondary_container > span'
+    ).getText()
+  }
+
   //Check out button
   get checkOutBtn() {
     return $('#checkout')
